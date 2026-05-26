@@ -49,18 +49,29 @@ npm run dev                  # starts apps/web on http://localhost:5173
 | `npm run lint`      | ESLint across workspaces                        |
 | `npm run format`    | Prettier write across the repo                  |
 
-## Phase 0 — Foundation
+## What's wired
 
-What's wired today:
+**Phase 0 — Foundation**
 
-- Monorepo (npm workspaces, TypeScript project refs)
+- Monorepo (npm workspaces)
 - Design token system → Tailwind + CSS variables
 - Dark mode + 5 mood themes (`data-mood="calm|anxious|sad|happy|overwhelmed"`)
 - Framer Motion preset library (respects `prefers-reduced-motion`)
 - React Router skeleton + AppShell
 - i18next bootstrap (en, scaffold for hi/es/ja)
-- ESLint, Prettier, lint-staged + husky
-- GitHub Actions CI
+- ESLint, Prettier, lint-staged + husky (local)
+- GitHub Actions CI + Vercel deploy
+
+**Phase 1 — The Hook**
+
+- Premium landing (Hero · Pillars · Mood demo · How it works · Social proof · CTA)
+- Firebase Authentication (email/password + Google) with graceful "not configured" fallback
+- `<RequireAuth>` route guard with destination preservation
+- 3-step onboarding (welcome → mood → intentions)
+- Profile page stub (`/me`)
+- Auth-aware header (avatar / sign-in)
+
+See [docs/FIREBASE_SETUP.md](docs/FIREBASE_SETUP.md) for enabling sign-in.
 
 ## Roadmap
 

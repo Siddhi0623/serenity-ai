@@ -1,7 +1,8 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import { ThemeMoodSwitcher } from '@/components/ThemeMoodSwitcher';
+import { UserMenu } from '@/components/UserMenu';
 import { AuroraBackground } from '@/components/visual/AuroraBackground';
 import { fadeDown } from '@/lib/motion-presets';
 
@@ -24,7 +25,10 @@ export function AppShell() {
             Serenity<span className="text-primary">.</span>
           </span>
         </Link>
-        <ThemeMoodSwitcher />
+        <div className="flex items-center gap-3">
+          <ThemeMoodSwitcher />
+          <UserMenu />
+        </div>
       </motion.header>
 
       <main className="container-calm pb-section relative z-10 flex-1 pt-8">
