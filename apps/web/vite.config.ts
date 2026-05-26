@@ -15,6 +15,10 @@ export default defineConfig({
     host: true,
   },
   build: {
+    // Output to the repo root so Vercel (which expects `dist` at the project
+    // root by default for the Vite framework) finds it without extra config.
+    outDir: path.resolve(__dirname, '../../dist'),
+    emptyOutDir: true,
     target: 'es2022',
     sourcemap: true,
     rollupOptions: {

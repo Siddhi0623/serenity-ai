@@ -2,8 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build --workspace=@serenity/web",
   "installCommand": "npm ci",
-  "outputDirectory": "apps/web/dist",
-  "framework": "vite",
+  "outputDirectory": "dist",
+  "framework": null,
   "headers": [
     {
       "source": "/(.*)",
