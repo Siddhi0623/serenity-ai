@@ -34,6 +34,7 @@ serenity-ai/
 ```bash
 # Use Node 20 (see .nvmrc)
 npm install
+npm run hooks:install        # enable git pre-commit hooks (local only)
 cp .env.example .env.local   # fill in values as you go
 npm run dev                  # starts apps/web on http://localhost:5173
 ```
