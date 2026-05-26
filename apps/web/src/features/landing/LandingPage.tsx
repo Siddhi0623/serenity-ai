@@ -36,15 +36,15 @@ export function LandingPage() {
         className="mx-auto max-w-3xl pt-12 text-center sm:pt-20"
       >
         <motion.div variants={fadeUp} className="mb-6 flex justify-center">
-          <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium text-fg-muted">
-            <Sparkles className="h-3.5 w-3.5 text-primary" />
+          <span className="glass text-fg-muted inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium">
+            <Sparkles className="text-primary h-3.5 w-3.5" />
             {t('hero.eyebrow', 'Mental wellness, beautifully designed')}
           </span>
         </motion.div>
 
         <motion.h1
           variants={fadeUp}
-          className="font-display text-4xl font-semibold leading-[1.05] tracking-tight text-fg sm:text-6xl lg:text-7xl"
+          className="font-display text-fg text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
         >
           {t('hero.titleA', 'Quiet your mind.')}
           <br />
@@ -53,7 +53,7 @@ export function LandingPage() {
 
         <motion.p
           variants={fadeUp}
-          className="mx-auto mt-6 max-w-xl text-balance text-base text-fg-muted sm:text-lg"
+          className="text-fg-muted mx-auto mt-6 max-w-xl text-balance text-base sm:text-lg"
         >
           {t(
             'hero.subtitle',
@@ -61,7 +61,10 @@ export function LandingPage() {
           )}
         </motion.p>
 
-        <motion.div variants={fadeUp} className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+        <motion.div
+          variants={fadeUp}
+          className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
+        >
           <Button size="lg">
             {t('hero.ctaPrimary', 'Start your first breath')}
             <ArrowRight className="h-4 w-4" />
@@ -81,11 +84,11 @@ export function LandingPage() {
         className="mt-20 w-full max-w-3xl"
       >
         <Card>
-          <div className="flex items-center gap-2 text-sm font-medium text-fg-muted">
-            <Heart className="h-4 w-4 text-primary" />
+          <div className="text-fg-muted flex items-center gap-2 text-sm font-medium">
+            <Heart className="text-primary h-4 w-4" />
             <span>{t('moodDemo.label', 'How are you feeling right now?')}</span>
           </div>
-          <p className="mt-2 text-sm text-fg-subtle">
+          <p className="text-fg-subtle mt-2 text-sm">
             {t(
               'moodDemo.description',
               'Tap a feeling — the entire interface shifts to match. Your mood is private and stays on this device.',
@@ -100,7 +103,7 @@ export function LandingPage() {
                 className={cn(
                   'rounded-full border px-4 py-2 text-sm font-medium capitalize transition-all',
                   mood === m
-                    ? 'border-transparent bg-primary text-primary-fg shadow-md'
+                    ? 'bg-primary text-primary-fg border-transparent shadow-md'
                     : 'border-border bg-surface/60 text-fg-muted hover:border-primary/40 hover:text-fg',
                 )}
               >
@@ -108,8 +111,8 @@ export function LandingPage() {
               </button>
             ))}
           </div>
-          <p className="mt-5 text-xs text-fg-subtle">
-            Active palette: <span className="font-medium text-fg-muted">{MOOD_TONE[mood]}</span>
+          <p className="text-fg-subtle mt-5 text-xs">
+            Active palette: <span className="text-fg-muted font-medium">{MOOD_TONE[mood]}</span>
           </p>
         </Card>
       </motion.div>
@@ -149,19 +152,17 @@ export function LandingPage() {
         ].map((item) => (
           <motion.div key={item.title} variants={fadeUp}>
             <Card className="h-full">
-              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+              <div className="bg-primary/10 text-primary mb-3 inline-flex h-10 w-10 items-center justify-center rounded-2xl">
                 {item.icon}
               </div>
-              <h3 className="text-lg font-semibold text-fg">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-fg-muted">{item.body}</p>
+              <h3 className="text-fg text-lg font-semibold">{item.title}</h3>
+              <p className="text-fg-muted mt-2 text-sm leading-relaxed">{item.body}</p>
             </Card>
           </motion.div>
         ))}
       </motion.div>
 
-      <p className="mt-20 text-xs text-fg-subtle">
-        Phase 0 · Foundation · Built with care.
-      </p>
+      <p className="text-fg-subtle mt-20 text-xs">Phase 0 · Foundation · Built with care.</p>
     </motion.section>
   );
 }

@@ -1,6 +1,15 @@
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
-import { palette, typography, radius, shadow, motion, screens, spacing, z } from './src/design/tokens';
+import {
+  palette,
+  typography,
+  radius,
+  shadow,
+  motion,
+  screens,
+  spacing,
+  z,
+} from './src/design/tokens';
 
 /**
  * Tailwind is wired to CSS variables (defined in src/styles/globals.css)
@@ -67,19 +76,20 @@ const config: Config = {
       transitionTimingFunction: motion.ease,
       transitionDuration: motion.duration,
       backgroundImage: {
-        'aurora': 'radial-gradient(60% 60% at 20% 10%, hsl(var(--color-aurora-1) / 0.55), transparent 60%), radial-gradient(45% 45% at 80% 20%, hsl(var(--color-aurora-2) / 0.45), transparent 60%), radial-gradient(50% 60% at 50% 90%, hsl(var(--color-aurora-3) / 0.35), transparent 65%)',
-        'mesh': 'conic-gradient(from 180deg at 50% 50%, hsl(var(--color-aurora-1) / 0.25), hsl(var(--color-aurora-2) / 0.25), hsl(var(--color-aurora-3) / 0.25), hsl(var(--color-aurora-1) / 0.25))',
+        aurora:
+          'radial-gradient(60% 60% at 20% 10%, hsl(var(--color-aurora-1) / 0.55), transparent 60%), radial-gradient(45% 45% at 80% 20%, hsl(var(--color-aurora-2) / 0.45), transparent 60%), radial-gradient(50% 60% at 50% 90%, hsl(var(--color-aurora-3) / 0.35), transparent 65%)',
+        mesh: 'conic-gradient(from 180deg at 50% 50%, hsl(var(--color-aurora-1) / 0.25), hsl(var(--color-aurora-2) / 0.25), hsl(var(--color-aurora-3) / 0.25), hsl(var(--color-aurora-1) / 0.25))',
       },
       keyframes: {
-        'breath': {
+        breath: {
           '0%, 100%': { transform: 'scale(1)', opacity: '0.85' },
           '50%': { transform: 'scale(1.08)', opacity: '1' },
         },
-        'float': {
+        float: {
           '0%, 100%': { transform: 'translateY(0) translateX(0)' },
           '50%': { transform: 'translateY(-14px) translateX(6px)' },
         },
-        'shimmer': {
+        shimmer: {
           '0%': { backgroundPosition: '0% 50%' },
           '100%': { backgroundPosition: '200% 50%' },
         },

@@ -11,7 +11,7 @@ meditation, mood tracking, journaling, and a calming community space.
 
 - **Frontend** — React 18 + Vite + TypeScript + Tailwind CSS + Framer Motion
 - **State** — TanStack Query (server) + Zustand (UI) + Context (auth/theme)
-- **Backend** *(Phase 2)* — Node.js + Express + MongoDB Atlas + Firebase Admin
+- **Backend** _(Phase 2)_ — Node.js + Express + MongoDB Atlas + Firebase Admin
 - **AI** — OpenAI (streaming) with crisis-detection guardrail
 - **Hosting** — Vercel (web) + Railway (api) + MongoDB Atlas
 
@@ -40,13 +40,13 @@ npm run dev                  # starts apps/web on http://localhost:5173
 
 ## Scripts (root)
 
-| script              | what it does                                        |
-| ------------------- | --------------------------------------------------- |
-| `npm run dev`       | Start the web app in dev mode                       |
-| `npm run build`     | Build every workspace that has a `build` script     |
-| `npm run typecheck` | TypeScript noEmit pass across workspaces            |
-| `npm run lint`      | ESLint across workspaces                            |
-| `npm run format`    | Prettier write across the repo                      |
+| script              | what it does                                    |
+| ------------------- | ----------------------------------------------- |
+| `npm run dev`       | Start the web app in dev mode                   |
+| `npm run build`     | Build every workspace that has a `build` script |
+| `npm run typecheck` | TypeScript noEmit pass across workspaces        |
+| `npm run lint`      | ESLint across workspaces                        |
+| `npm run format`    | Prettier write across the repo                  |
 
 ## Phase 0 — Foundation
 

@@ -12,12 +12,56 @@
 
 export const palette = {
   // Brand — calm, soft, premium
-  lavender: { 50: '270 100% 98%', 200: '258 91% 90%', 400: '258 88% 80%', 500: '258 84% 72%', 600: '258 70% 62%' },
-  sky:      { 50: '204 100% 97%', 200: '199 95% 87%', 400: '199 89% 74%', 500: '199 85% 60%', 600: '200 78% 48%' },
-  mint:     { 50: '160 80% 96%',  200: '160 75% 86%', 400: '160 70% 68%', 500: '160 65% 52%', 600: '160 60% 40%' },
-  peach:    { 50: '24 100% 97%',  200: '22 95% 88%',  400: '20 91% 78%',  500: '18 85% 68%',  600: '16 75% 56%' },
-  navy:     { 50: '225 30% 96%',  200: '225 30% 80%', 400: '225 28% 40%', 500: '225 30% 20%', 600: '225 36% 14%', 700: '225 42% 10%', 800: '225 45% 7%',  900: '225 50% 5%' },
-  ink:      { 50: '0 0% 100%',    100: '220 14% 96%', 200: '220 13% 91%', 300: '216 12% 84%', 400: '218 11% 65%', 500: '220 9% 46%',  600: '215 14% 34%', 700: '217 19% 27%', 800: '215 28% 17%', 900: '222 47% 11%' },
+  lavender: {
+    50: '270 100% 98%',
+    200: '258 91% 90%',
+    400: '258 88% 80%',
+    500: '258 84% 72%',
+    600: '258 70% 62%',
+  },
+  sky: {
+    50: '204 100% 97%',
+    200: '199 95% 87%',
+    400: '199 89% 74%',
+    500: '199 85% 60%',
+    600: '200 78% 48%',
+  },
+  mint: {
+    50: '160 80% 96%',
+    200: '160 75% 86%',
+    400: '160 70% 68%',
+    500: '160 65% 52%',
+    600: '160 60% 40%',
+  },
+  peach: {
+    50: '24 100% 97%',
+    200: '22 95% 88%',
+    400: '20 91% 78%',
+    500: '18 85% 68%',
+    600: '16 75% 56%',
+  },
+  navy: {
+    50: '225 30% 96%',
+    200: '225 30% 80%',
+    400: '225 28% 40%',
+    500: '225 30% 20%',
+    600: '225 36% 14%',
+    700: '225 42% 10%',
+    800: '225 45% 7%',
+    900: '225 50% 5%',
+  },
+  ink: {
+    50: '0 0% 100%',
+    100: '220 14% 96%',
+    200: '220 13% 91%',
+    300: '216 12% 84%',
+    400: '218 11% 65%',
+    500: '220 9% 46%',
+    600: '215 14% 34%',
+    700: '217 19% 27%',
+    800: '215 28% 17%',
+    900: '222 47% 11%',
+  },
 } as const;
 
 export const typography = {
@@ -28,17 +72,17 @@ export const typography = {
   },
   // Modular scale — 1.200 (minor third). Mobile-first; scales up at md/lg via Tailwind utilities.
   fontSize: {
-    xs: ['0.75rem',  { lineHeight: '1.1rem',  letterSpacing: '0.01em' }],
+    xs: ['0.75rem', { lineHeight: '1.1rem', letterSpacing: '0.01em' }],
     sm: ['0.875rem', { lineHeight: '1.35rem', letterSpacing: '0.005em' }],
-    base: ['1rem',   { lineHeight: '1.6rem',  letterSpacing: '0' }],
+    base: ['1rem', { lineHeight: '1.6rem', letterSpacing: '0' }],
     lg: ['1.125rem', { lineHeight: '1.75rem', letterSpacing: '-0.005em' }],
-    xl: ['1.25rem',  { lineHeight: '1.9rem',  letterSpacing: '-0.01em' }],
-    '2xl': ['1.5rem',   { lineHeight: '2.1rem',  letterSpacing: '-0.015em' }],
-    '3xl': ['1.875rem', { lineHeight: '2.4rem',  letterSpacing: '-0.02em' }],
-    '4xl': ['2.25rem',  { lineHeight: '2.7rem',  letterSpacing: '-0.025em' }],
-    '5xl': ['3rem',     { lineHeight: '3.3rem',  letterSpacing: '-0.03em' }],
-    '6xl': ['3.75rem',  { lineHeight: '4rem',    letterSpacing: '-0.035em' }],
-    '7xl': ['4.5rem',   { lineHeight: '4.7rem',  letterSpacing: '-0.04em' }],
+    xl: ['1.25rem', { lineHeight: '1.9rem', letterSpacing: '-0.01em' }],
+    '2xl': ['1.5rem', { lineHeight: '2.1rem', letterSpacing: '-0.015em' }],
+    '3xl': ['1.875rem', { lineHeight: '2.4rem', letterSpacing: '-0.02em' }],
+    '4xl': ['2.25rem', { lineHeight: '2.7rem', letterSpacing: '-0.025em' }],
+    '5xl': ['3rem', { lineHeight: '3.3rem', letterSpacing: '-0.03em' }],
+    '6xl': ['3.75rem', { lineHeight: '4rem', letterSpacing: '-0.035em' }],
+    '7xl': ['4.5rem', { lineHeight: '4.7rem', letterSpacing: '-0.04em' }],
   },
   fontWeight: { regular: '400', medium: '500', semibold: '600', bold: '700' },
 } as const;
@@ -79,16 +123,16 @@ export const motion = {
   },
   ease: {
     // Premium-feeling curves. Avoid linear.
-    out: 'cubic-bezier(0.16, 1, 0.3, 1)',           // gentle out — for entries
-    inOut: 'cubic-bezier(0.65, 0, 0.35, 1)',        // smooth for state changes
-    spring: 'cubic-bezier(0.34, 1.56, 0.64, 1)',    // playful bounce (use sparingly)
-    breath: 'cubic-bezier(0.45, 0, 0.55, 1)',       // sine-like, ideal for breathing
+    out: 'cubic-bezier(0.16, 1, 0.3, 1)', // gentle out — for entries
+    inOut: 'cubic-bezier(0.65, 0, 0.35, 1)', // smooth for state changes
+    spring: 'cubic-bezier(0.34, 1.56, 0.64, 1)', // playful bounce (use sparingly)
+    breath: 'cubic-bezier(0.45, 0, 0.55, 1)', // sine-like, ideal for breathing
   },
   // Framer Motion spring presets (consumed in motion-presets.ts)
   spring: {
     gentle: { type: 'spring' as const, stiffness: 120, damping: 20, mass: 0.8 },
     snappy: { type: 'spring' as const, stiffness: 300, damping: 28, mass: 0.6 },
-    soft:   { type: 'spring' as const, stiffness: 80,  damping: 18, mass: 1 },
+    soft: { type: 'spring' as const, stiffness: 80, damping: 18, mass: 1 },
   },
 } as const;
 

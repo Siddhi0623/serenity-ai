@@ -95,7 +95,7 @@
     @apply bg-bg text-fg font-sans;
     background-image: radial-gradient(
       80% 60% at 50% 0%,
-      hsl(var(--color-aurora-1) / 0.10),
+      hsl(var(--color-aurora-1) / 0.1),
       transparent 60%
     );
     background-attachment: fixed;
@@ -129,7 +129,9 @@
   }
 
   /* Headings — display font */
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     @apply font-display tracking-tight;
   }
 }
@@ -155,7 +157,7 @@
   }
 
   .surface-elevated {
-    @apply rounded-2xl bg-surface border border-border shadow-md;
+    @apply bg-surface border-border rounded-2xl border shadow-md;
   }
 
   .text-gradient {
