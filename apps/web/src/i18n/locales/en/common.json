@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "eyebrow": "Mental wellness, beautifully designed",
+    "titleA": "Quiet your mind.",
+    "titleB": "Feel safe again.",
+    "subtitle": "An AI companion, breathing space, and calm rituals — designed to gently bring you back to yourself.",
+    "ctaPrimary": "Start your first breath",
+    "ctaSecondary": "Explore quietly"
+  },
+  "moodDemo": {
+    "label": "How are you feeling right now?",
+    "description": "Tap a feeling — the entire interface shifts to match. Your mood is private and stays on this device."
+  },
+  "foundation": {
+    "tokens": {
+      "title": "Design tokens",
+      "body": "A single source of truth for colors, type, motion. Re-skins via CSS variables — no React re-render."
+    },
+    "moods": {
+      "title": "Five mood themes",
+      "body": "Calm, anxious, sad, happy, overwhelmed — each shifts the ambient gradient without sacrificing legibility."
+    },
+    "motion": {
+      "title": "Calm motion",
+      "body": "Framer Motion presets with spring physics, respecting prefers-reduced-motion at the source."
+    }
+  }
+}
